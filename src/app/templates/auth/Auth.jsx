@@ -18,12 +18,13 @@ import Spinner from '../../atoms/spinner/Spinner';
 import ScrollView from '../../atoms/scroll/ScrollView';
 import Header, { TitleWrapper } from '../../atoms/header/Header';
 import Avatar from '../../atoms/avatar/Avatar';
-import ContextMenu, { MenuItem, MenuHeader } from '../../atoms/context-menu/ContextMenu';
+import ContextMenu, { MenuItem } from '../../atoms/context-menu/ContextMenu';
 
 import ChevronBottomIC from '../../../../public/res/ic/outlined/chevron-bottom.svg';
 import EyeIC from '../../../../public/res/ic/outlined/eye.svg';
 import EyeBlindIC from '../../../../public/res/ic/outlined/eye-blind.svg';
-import CinnySvg from '../../../../public/res/svg/cinny.svg';
+// import CinnySvg from '../../../../public/res/svg/cinny.svg';
+import PinguiLabsLogo from '../../../../public/res/svg/pinguilabs.png';
 import SSOButtons from '../../molecules/sso-buttons/SSOButtons';
 
 const LOCALPART_SIGNUP_REGEX = /^[a-z0-9_\-.=/]+$/;
@@ -112,7 +113,7 @@ function Homeserver({ onChange }) {
 
   return (
     <>
-      <div className="homeserver-form">
+      {/* <div className="homeserver-form">
         <Input
           name="homeserver"
           onChange={handleHsInput}
@@ -144,7 +145,7 @@ function Homeserver({ onChange }) {
           )}
           render={(toggleMenu) => <IconButton onClick={toggleMenu} src={ChevronBottomIC} />}
         />
-      </div>
+      </div> */}
       {process.error !== undefined && <Text className="homeserver-form__error" variant="b3">{process.error}</Text>}
       {process.isLoading && (
         <div className="homeserver-form__status flex--center">
@@ -207,7 +208,7 @@ function Login({ loginFlow, baseUrl }) {
 
   return (
     <>
-      <div className="auth-form__heading">
+      <div className="auth-form__heading login-form">
         <Text variant="h2" weight="medium">Login</Text>
         {isPassword && (
           <ContextMenu
@@ -562,9 +563,9 @@ function Auth() {
           {!loginToken && (
             <div className="auth-card">
               <Header>
-                <Avatar size="extra-small" imageSrc={CinnySvg} />
+                <Avatar size="small" imageSrc={PinguiLabsLogo} />
                 <TitleWrapper>
-                  <Text variant="h2" weight="medium">Cinny</Text>
+                  <Text variant="h2" weight="medium">Pinguichat</Text>
                 </TitleWrapper>
               </Header>
               <div className="auth-card__content">

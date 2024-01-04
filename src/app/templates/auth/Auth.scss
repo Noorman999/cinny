@@ -56,6 +56,11 @@
   }
 }
 
+.auth-form__heading,
+.login-form {
+    margin-top: 0 !important;
+  }
+
 .homeserver-form {
   display: flex;
   margin-bottom: var(--sp-extra-tight);

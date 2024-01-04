@@ -1,12 +1,13 @@
 {
-  "defaultHomeserver": 2,
+  "defaultHomeserver": 6,
   "homeserverList": [
     "converser.eu",
     "envs.net",
     "matrix.org",
     "monero.social",
     "mozilla.org",
-    "xmr.se"
+    "xmr.se",
+    "synapse.pinguilabs.com"
   ],
   "allowCustomHomeservers": true
 }

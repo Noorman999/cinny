@@ -1,23 +1,52 @@
 @use '../../partials/flex';
 
 .app-welcome {
+  @extend .cp-fx__column--c-c;
+  justify-content: flex-start;
+  gap: 200px;
   width: 100%;
   height: 100%;
   background-color: var(--bg-surface);
+  padding: var(--sp-extra-loose);
+
+  &__heading {
+    width: 100%;
+    top: 10;
+    left: 0;
+
+    &__logo {
+      width: 64px;
+      height: 64px;
+    }
+
+    &__text {
+      color: var(--tc-surface-high);
+      text-align: center;
+    }
+  }
 
   & > div {
+    flex-grow: 0;
+  }
+
+  &__body {
     @extend .cp-fx__column--c-c;
-    max-width: 600px;
-  }
-  &__logo {
-    width: 64px;
-    height: 64px;
-  }
-  &__heading {
-    margin: var(--sp-extra-loose) 0 var(--sp-tight);
-    color: var(--tc-surface-high);
-  }
-  &__subheading {
-    color: var(--tc-surface-normal);
+    gap: 50px;
+
+    & > div {
+      @extend .cp-fx__column--c-c;
+      justify-content: space-between;
+      max-width: 750px;
+    }
+
+    &__title {
+      color: var(--tc-surface-normal);
+      text-align: center;
+    }
+
+    &__subtitle {
+      color: var(--tc-surface-low);
+      text-align: center;
+    }
   }
 }

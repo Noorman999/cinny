@@ -7,9 +7,9 @@ import navigation from './navigation';
 import settings from './settings';
 import { setFavicon } from '../../util/common';
 
-import LogoSVG from '../../../public/res/svg/cinny.svg';
-import LogoUnreadSVG from '../../../public/res/svg/cinny-unread.svg';
-import LogoHighlightSVG from '../../../public/res/svg/cinny-highlight.svg';
+import LogoSVG from '../../../public/res/svg/pinguilabs.png';
+import LogoUnreadSVG from '../../../public/res/svg/pinguilabs-unread.png';
+import LogoHighlightSVG from '../../../public/res/svg/pinguilabs-highlight.png';
 import { html, plain } from '../../util/markdown';
 
 function isNotifEvent(mEvent) {
